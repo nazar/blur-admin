@@ -39,7 +39,8 @@ function browserSyncInit(baseDir, browser) {
     startPath: '/',
     server: server,
     browser: browser,
-    ghostMode: false
+    ghostMode: false,
+    host: '192.168.50.15'
   });
 }
 
