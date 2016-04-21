@@ -137,6 +137,12 @@
   }
 }
 
+@mixin cd-timeline-left-color($color) {
+  &:before {
+    border-left-color: $color;
+  }
+}
+
 .cd-timeline-content-yellow {
   @include cd-timeline-color(rgba(0,0,0,.2));
 }
@@ -190,12 +196,6 @@
       left: 137%;
       top: 6px;
       font-size: 16px;
-    }
-  }
-
-  @mixin cd-timeline-left-color($color) {
-    &:before {
-      border-left-color: $color;
     }
   }
 

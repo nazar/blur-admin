@@ -12,7 +12,26 @@ It's just a first version, but we will continue development of this template to 
 ![alt tag](http://i.imgur.com/yOZPlps.jpg)
 **[Template Demo](http://akveo.com/blur-admin/#/dashboard)**
 
-## Installation
+## Vagrant Installation
+
+A [Vagrantfile](https://www.vagrantup.com/) is provided to provision a development VM.
+
+[Download vagrant](https://www.vagrantup.com/downloads.html) and [VirtualBox](https://www.virtualbox.org/)
+onto your workstation then download the base VM image using the following command:
+
+`vagrant box add ubuntu/trusty64`
+
+When asked, choose the virtualbox variant.
+
+Provision the development VM using `vagrant up` and ssh into the vm using `vagrant ssh`. Application files
+are placed in `/home/vagrant/files`. `cd files` after logging in and start the development server
+using `gulp serve`. Use `vagrant rsync-auto` to keep the host and guest VM files synced during development.
+
+Connect to [http://192.168.50.15:3000](http://192.168.50.15:3000)
+to connect to the application and [http://192.168.50.15:3001](http://192.168.50.15:3001) to connect to the
+[browsersync](https://browsersync.io/) console.
+
+## Manual Installation
 
 To build the template from scratch you will be required to have following tools
 * Download and install nodejs [https://nodejs.org](https://nodejs.org)
